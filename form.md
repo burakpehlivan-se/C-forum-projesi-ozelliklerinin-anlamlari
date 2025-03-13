@@ -1,3 +1,50 @@
+## En çok kullanılanlar:
+Basit bir windows Forms projesinde en sık kullanılan `Form` özellikleri şunlardır:
+
+**Temel ve Görünüm:**
+
+*   **`Text`:** Formun başlık çubuğunda görünen metni ayarlar (örneğin, "Müşteri Bilgileri", "Hesap Makinesi"). *Neredeyse her zaman kullanılır.*
+*   **`Name`:** Formun kod içindeki adını belirler. Kontrollere erişirken ve olayları (events) işlerken bu adı kullanırsınız. *Kesinlikle gereklidir.*
+*   **`Size`:** Formun genişliğini ve yüksekliğini (piksel cinsinden) ayarlar.
+*   **`ClientSize`:** Formun *iç* alanının (başlık çubuğu ve kenarlıklar hariç) genişliğini ve yüksekliğini ayarlar. İçeriği yerleştirmek için daha kullanışlıdır.
+*   **`Location`:** Formun ekran üzerindeki konumunu (sol üst köşesinin koordinatları) ayarlar.  Genellikle `StartPosition` ile birlikte kullanılır.
+*   **`StartPosition`:** Form ilk açıldığında nerede görüneceğini belirler. En yaygın kullanılan değerler:
+    *   `CenterScreen`: Formu ekranın ortasında açar.
+    *   `CenterParent`: Formu, onu açan formun ortasında açar (eğer varsa).
+    *   `WindowsDefaultLocation`: Windows'un formu varsayılan bir konuma yerleştirmesine izin verir.
+    *    Manual : location propertysi ile beraber kullanılır.
+*   **`FormBorderStyle`:** Formun kenarlık stilini ve başlık çubuğundaki düğmeleri (simge durumuna küçült, ekranı kapla, kapat) belirler. En yaygın kullanılanlar:
+    *   `FixedSingle` / `FixedDialog`: Sabit boyutlu bir form (kullanıcı tarafından yeniden boyutlandırılamaz).
+    *   `Sizable`: Kullanıcının formu yeniden boyutlandırmasına izin verir.
+    * `None`: Kenarlıksız pencere oluşturur.
+*   **`ControlBox`:** Başlık çubuğundaki kontrol kutusunun (simge durumuna küçült, ekranı kapla, kapat düğmeleri) görüntülenip görüntülenmeyeceğini belirler.
+*   **`MinimizeBox`:** Başlık çubuğundaki simge durumuna küçült düğmesinin görüntülenip görüntülenmeyeceğini belirler.
+*   **`MaximizeBox`:** Başlık çubuğundaki ekranı kapla düğmesinin görüntülenip görüntülenmeyeceğini belirler.
+*   **`ShowIcon`:** Başlık çubuğunda ve görev çubuğunda formun simgesinin görüntülenip görüntülenmeyeceğini belirler.
+*   **`Icon`:** Formun simgesini ayarlar.
+*   **`BackColor`:** Formun arka plan rengini ayarlar.
+*   **`BackgroundImage`**: Formun arka plan resmini ayarlar.
+*   **`BackgroundImageLayout`**: Arka plan resmini formun içinde nasıl konumlandıracağını belirler (`Tile`, `Center`, `Stretch`, `Zoom`).
+*   **`Visible`:** Formun görünür olup olmadığını belirler (genellikle kod içinde `form.Show()` veya `form.ShowDialog()` ile ayarlanır).
+* **`Enabled`**: Kullanıcının form ile etkileşime girip giremeyeceğini ayarlar.
+
+**Davranış ve Etkileşim:**
+
+*   **`AcceptButton`:** Kullanıcı Enter tuşuna bastığında hangi düğmenin "tıklanmış" gibi davranacağını belirler (genellikle "Tamam" düğmesi).
+*   **`CancelButton`:** Kullanıcı Esc tuşuna bastığında hangi düğmenin "tıklanmış" gibi davranacağını belirler (genellikle "İptal" düğmesi).
+*   **`KeyPreview`:** Formun, tuş basma olaylarını (örneğin, bir tuşa basıldığında) *önce* kendisinin işlemesini sağlar.  Form düzeyinde klavye kısayolları tanımlamak için kullanışlıdır.
+*   **`AutoScroll`:** Formun içeriği formun boyutundan büyükse otomatik olarak kaydırma çubuklarının görüntülenmesini sağlar.
+*   **`WindowState`:** Formun başlangıçta simge durumuna küçültülmüş, ekranı kaplamış veya normal boyutta olup olmadığını belirler. Ayrıca, formun çalışma zamanında durumunu değiştirmek için de kullanılabilir (örneğin, bir düğmeye tıklanınca formu ekranı kapla yapmak).
+
+**Diğer:**
+
+* **`TopMost`**: Diğer tüm pencerelerin üzerinde kalmasını sağlar. Çok nadir durumlarda kullanılır (örneğin, bir bildirim penceresi).
+* **`Opacity`**: Formu yarı saydam hale getirmek.
+* **`TransparencyKey`**: Formun belli bir rengini transparan yapmak.
+*   **`AutoScaleMode`:** Formun ve içeriğinin, ekran çözünürlüğü veya yazı tipi boyutları değiştiğinde otomatik olarak nasıl ölçekleneceğini belirler. Genellikle `Font` olarak ayarlanır.  Farklı ekranlarda formun düzgün görünmesini sağlamak için önemlidir.
+
+
+
 `System.Windows.Forms.Form` sınıfının özelliklerinin Türkçe açıklamaları ve daha anlaşılır hale getirilmiş versiyonları:
 
 | Özellik Adı (Türkçe)                        | Açıklama (Türkçe, Anlaşılır)                                                                                                                                                                                                                                   | Orijinal İngilizce Adı               |
@@ -165,50 +212,3 @@
 | **Pencere Hedefi**                          | Bu özellik bu sınıf için geçerli değildir. (Control'den miras)                                                                                                                                                                                                 | `WindowTarget`                       |
 
 Bu tablo, `System.Windows.Forms.Form` sınıfının tüm önemli özelliklerini kapsamaktadır.
-
-
-## En çok kullanılanlar:
-Basit bir windows Forms projesinde en sık kullanılan `Form` özellikleri şunlardır:
-
-**Temel ve Görünüm:**
-
-*   **`Text`:** Formun başlık çubuğunda görünen metni ayarlar (örneğin, "Müşteri Bilgileri", "Hesap Makinesi"). *Neredeyse her zaman kullanılır.*
-*   **`Name`:** Formun kod içindeki adını belirler. Kontrollere erişirken ve olayları (events) işlerken bu adı kullanırsınız. *Kesinlikle gereklidir.*
-*   **`Size`:** Formun genişliğini ve yüksekliğini (piksel cinsinden) ayarlar.
-*   **`ClientSize`:** Formun *iç* alanının (başlık çubuğu ve kenarlıklar hariç) genişliğini ve yüksekliğini ayarlar. İçeriği yerleştirmek için daha kullanışlıdır.
-*   **`Location`:** Formun ekran üzerindeki konumunu (sol üst köşesinin koordinatları) ayarlar.  Genellikle `StartPosition` ile birlikte kullanılır.
-*   **`StartPosition`:** Form ilk açıldığında nerede görüneceğini belirler. En yaygın kullanılan değerler:
-    *   `CenterScreen`: Formu ekranın ortasında açar.
-    *   `CenterParent`: Formu, onu açan formun ortasında açar (eğer varsa).
-    *   `WindowsDefaultLocation`: Windows'un formu varsayılan bir konuma yerleştirmesine izin verir.
-    *    Manual : location propertysi ile beraber kullanılır.
-*   **`FormBorderStyle`:** Formun kenarlık stilini ve başlık çubuğundaki düğmeleri (simge durumuna küçült, ekranı kapla, kapat) belirler. En yaygın kullanılanlar:
-    *   `FixedSingle` / `FixedDialog`: Sabit boyutlu bir form (kullanıcı tarafından yeniden boyutlandırılamaz).
-    *   `Sizable`: Kullanıcının formu yeniden boyutlandırmasına izin verir.
-    * `None`: Kenarlıksız pencere oluşturur.
-*   **`ControlBox`:** Başlık çubuğundaki kontrol kutusunun (simge durumuna küçült, ekranı kapla, kapat düğmeleri) görüntülenip görüntülenmeyeceğini belirler.
-*   **`MinimizeBox`:** Başlık çubuğundaki simge durumuna küçült düğmesinin görüntülenip görüntülenmeyeceğini belirler.
-*   **`MaximizeBox`:** Başlık çubuğundaki ekranı kapla düğmesinin görüntülenip görüntülenmeyeceğini belirler.
-*   **`ShowIcon`:** Başlık çubuğunda ve görev çubuğunda formun simgesinin görüntülenip görüntülenmeyeceğini belirler.
-*   **`Icon`:** Formun simgesini ayarlar.
-*   **`BackColor`:** Formun arka plan rengini ayarlar.
-*   **`BackgroundImage`**: Formun arka plan resmini ayarlar.
-*   **`BackgroundImageLayout`**: Arka plan resmini formun içinde nasıl konumlandıracağını belirler (`Tile`, `Center`, `Stretch`, `Zoom`).
-*   **`Visible`:** Formun görünür olup olmadığını belirler (genellikle kod içinde `form.Show()` veya `form.ShowDialog()` ile ayarlanır).
-* **`Enabled`**: Kullanıcının form ile etkileşime girip giremeyeceğini ayarlar.
-
-**Davranış ve Etkileşim:**
-
-*   **`AcceptButton`:** Kullanıcı Enter tuşuna bastığında hangi düğmenin "tıklanmış" gibi davranacağını belirler (genellikle "Tamam" düğmesi).
-*   **`CancelButton`:** Kullanıcı Esc tuşuna bastığında hangi düğmenin "tıklanmış" gibi davranacağını belirler (genellikle "İptal" düğmesi).
-*   **`KeyPreview`:** Formun, tuş basma olaylarını (örneğin, bir tuşa basıldığında) *önce* kendisinin işlemesini sağlar.  Form düzeyinde klavye kısayolları tanımlamak için kullanışlıdır.
-*   **`AutoScroll`:** Formun içeriği formun boyutundan büyükse otomatik olarak kaydırma çubuklarının görüntülenmesini sağlar.
-*   **`WindowState`:** Formun başlangıçta simge durumuna küçültülmüş, ekranı kaplamış veya normal boyutta olup olmadığını belirler. Ayrıca, formun çalışma zamanında durumunu değiştirmek için de kullanılabilir (örneğin, bir düğmeye tıklanınca formu ekranı kapla yapmak).
-
-**Diğer:**
-
-* **`TopMost`**: Diğer tüm pencerelerin üzerinde kalmasını sağlar. Çok nadir durumlarda kullanılır (örneğin, bir bildirim penceresi).
-* **`Opacity`**: Formu yarı saydam hale getirmek.
-* **`TransparencyKey`**: Formun belli bir rengini transparan yapmak.
-*   **`AutoScaleMode`:** Formun ve içeriğinin, ekran çözünürlüğü veya yazı tipi boyutları değiştiğinde otomatik olarak nasıl ölçekleneceğini belirler. Genellikle `Font` olarak ayarlanır.  Farklı ekranlarda formun düzgün görünmesini sağlamak için önemlidir.
-
