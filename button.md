@@ -154,4 +154,4 @@ Tamamdır, `System.Windows.Forms.Button` kontrolünün özelliklerinin (properti
 | `WindowTarget`                       | **Pencere Hedefi**                      | (Bu sınıf için geçerli değil) (Control'den miras)                                                                                                                                                         |
 
 
-Bu tablo, `Button` kontrolünün tüm önemli özelliklerini ve açıklamalarını kapsamaktadır. Herhangi bir özellik ile ilgili daha fazla bilgiye ihtiyaç duyarsan, sormaktan çekinme!
+Bu tablo, `Button` kontrolünün tüm önemli özelliklerini ve açıklamalarını kapsamaktadır.
