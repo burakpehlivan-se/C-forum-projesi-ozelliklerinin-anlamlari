@@ -176,4 +176,4 @@ Bu liste, en yaygın TextBox senaryolarında kullanılan özellikleri kapsar. İ
 | `WindowTarget`                       | **Pencere Hedefi**                      | (Bu sınıf için geçerli değil) (Control'den miras)                                                                                                                                                                                                        |
 | `WordWrap`                           | **Sözcük Kaydırma**                     | Çok satırlı bir metin kutusunda, metnin satırın sonuna ulaştığında otomatik olarak bir sonraki satıra geçip geçmeyeceğini belirler. `true` ise (varsayılan) sözcük kaydırma etkindir.                                                                    |
 
-Bu tablo, `TextBox` kontrolünün tüm özelliklerini ve açıklamalarını kapsamaktadır.
+Bu tablo, `TextBox` kontrolünün bütün özelliklerini ve açıklamalarını kapsamaktadır.
